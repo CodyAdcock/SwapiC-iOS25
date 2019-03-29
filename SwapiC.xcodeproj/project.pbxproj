@@ -13,6 +13,10 @@
 		C38249EA224D6CB0009BB711 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C38249E8224D6CB0009BB711 /* LaunchScreen.storyboard */; };
 		C38249ED224D6CB0009BB711 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C38249EC224D6CB0009BB711 /* main.m */; };
 		C38249FB224D9475009BB711 /* CRAPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = C38249FA224D9475009BB711 /* CRAPerson.m */; };
+		C38249FE224D988F009BB711 /* CRASwapiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = C38249FD224D988F009BB711 /* CRASwapiClient.m */; };
+		C3C01711224DACF0008D0183 /* CRAPersonsListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C01710224DACF0008D0183 /* CRAPersonsListTableViewController.m */; };
+		C3C01717224DAD0F008D0183 /* CRAPersonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C01716224DAD0F008D0183 /* CRAPersonTableViewCell.m */; };
+		C3C0171A224DAD80008D0183 /* PersonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C01719224DAD80008D0183 /* PersonDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,14 @@
 		C38249EC224D6CB0009BB711 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C38249F9224D9475009BB711 /* CRAPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CRAPerson.h; sourceTree = "<group>"; };
 		C38249FA224D9475009BB711 /* CRAPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CRAPerson.m; sourceTree = "<group>"; };
+		C38249FC224D988F009BB711 /* CRASwapiClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CRASwapiClient.h; sourceTree = "<group>"; };
+		C38249FD224D988F009BB711 /* CRASwapiClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CRASwapiClient.m; sourceTree = "<group>"; };
+		C3C0170F224DACF0008D0183 /* CRAPersonsListTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CRAPersonsListTableViewController.h; sourceTree = "<group>"; };
+		C3C01710224DACF0008D0183 /* CRAPersonsListTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CRAPersonsListTableViewController.m; sourceTree = "<group>"; };
+		C3C01715224DAD0F008D0183 /* CRAPersonTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CRAPersonTableViewCell.h; sourceTree = "<group>"; };
+		C3C01716224DAD0F008D0183 /* CRAPersonTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CRAPersonTableViewCell.m; sourceTree = "<group>"; };
+		C3C01718224DAD7F008D0183 /* SwapiC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwapiC-Bridging-Header.h"; sourceTree = "<group>"; };
+		C3C01719224DAD80008D0183 /* PersonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +101,8 @@
 		C38249F5224D6D26009BB711 /* Network Client */ = {
 			isa = PBXGroup;
 			children = (
+				C38249FC224D988F009BB711 /* CRASwapiClient.h */,
+				C38249FD224D988F009BB711 /* CRASwapiClient.m */,
 			);
 			path = "Network Client";
 			sourceTree = "<group>";
@@ -96,6 +110,8 @@
 		C38249F6224D6D27009BB711 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C3C01715224DAD0F008D0183 /* CRAPersonTableViewCell.h */,
+				C3C01716224DAD0F008D0183 /* CRAPersonTableViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -103,6 +119,9 @@
 		C38249F7224D6D28009BB711 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C3C0170F224DACF0008D0183 /* CRAPersonsListTableViewController.h */,
+				C3C01710224DACF0008D0183 /* CRAPersonsListTableViewController.m */,
+				C3C01719224DAD80008D0183 /* PersonDetailViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -115,6 +134,7 @@
 				C38249E6224D6CB0009BB711 /* Assets.xcassets */,
 				C38249EB224D6CB0009BB711 /* Info.plist */,
 				C38249EC224D6CB0009BB711 /* main.m */,
+				C3C01718224DAD7F008D0183 /* SwapiC-Bridging-Header.h */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -150,6 +170,7 @@
 				TargetAttributes = {
 					C38249D9224D6CAF009BB711 = {
 						CreatedOnToolsVersion = 10.2;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -191,7 +212,11 @@
 			files = (
 				C38249ED224D6CB0009BB711 /* main.m in Sources */,
 				C38249FB224D9475009BB711 /* CRAPerson.m in Sources */,
+				C3C01717224DAD0F008D0183 /* CRAPersonTableViewCell.m in Sources */,
+				C3C01711224DACF0008D0183 /* CRAPersonsListTableViewController.m in Sources */,
 				C38249DF224D6CAF009BB711 /* AppDelegate.m in Sources */,
+				C3C0171A224DAD80008D0183 /* PersonDetailViewController.swift in Sources */,
+				C38249FE224D988F009BB711 /* CRASwapiClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +358,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 23QW9JU9DK;
 				INFOPLIST_FILE = "$(SRCROOT)/SwapiC/Resources/Info.plist";
@@ -342,6 +368,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.CodyAdcock.SwapiC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwapiC/Resources/SwapiC-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -350,6 +379,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 23QW9JU9DK;
 				INFOPLIST_FILE = "$(SRCROOT)/SwapiC/Resources/Info.plist";
@@ -359,6 +389,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.CodyAdcock.SwapiC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwapiC/Resources/SwapiC-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

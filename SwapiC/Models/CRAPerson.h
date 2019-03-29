@@ -12,6 +12,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CRAPerson : NSObject
 
+@property (nonatomic, readonly, copy) NSString * name;
+@property (nonatomic, readonly, copy) NSString * height;
+@property (nonatomic, readonly, copy) NSString * mass;
+
+-(instancetype)initWithDictionary:(NSDictionary *)dictionary;
+
 @end
 
 NS_ASSUME_NONNULL_END

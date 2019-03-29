@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Person Detail View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="PersonDetailViewController" customModule="SwapiC" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -60,6 +60,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="heightLabel" destination="TOW-5b-abe" id="APV-GX-Izk"/>
+                        <outlet property="imageView" destination="wAt-2K-AkX" id="kJ7-8d-VLr"/>
+                        <outlet property="massLabel" destination="eRT-gD-9rB" id="COJ-kn-mpo"/>
+                        <outlet property="nameLabel" destination="mPT-he-3fr" id="beV-aa-Ut4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -68,14 +74,19 @@
         <!--Characters-->
         <scene sceneID="XTf-3x-zLy">
             <objects>
-                <tableViewController id="QIL-fh-1fV" sceneMemberID="viewController">
+                <tableViewController id="QIL-fh-1fV" customClass="CRAPersonsListTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Hts-Bk-9RA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search for a Character" id="P7m-6Q-gPP">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="123" id="Bjb-Ze-K84">
-                                <rect key="frame" x="0.0" y="28" width="414" height="123"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="personCell" rowHeight="123" id="Bjb-Ze-K84" customClass="CRAPersonTableViewCell">
+                                <rect key="frame" x="0.0" y="72" width="414" height="123"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bjb-Ze-K84" id="KUa-Bo-gcM">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="122.5"/>
@@ -88,6 +99,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="85" height="85"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="f57-An-vtH" secondAttribute="height" multiplier="1:1" id="3qU-nt-UMc"/>
+                                                        <constraint firstAttribute="width" constant="85" id="sJ5-3O-Dxn"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name: ()" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ef-Qg-3lY">
@@ -107,6 +119,8 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="nameLabel" destination="2ef-Qg-3lY" id="i9g-K3-l41"/>
+                                    <outlet property="personImageView" destination="f57-An-vtH" id="Xzz-42-5cX"/>
                                     <segue destination="BYZ-38-t0r" kind="show" id="KOD-sH-R6v"/>
                                 </connections>
                             </tableViewCell>
@@ -117,6 +131,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Characters" id="7J8-Mm-FWo"/>
+                    <connections>
+                        <outlet property="searchBar" destination="P7m-6Q-gPP" id="jhd-IC-bjx"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Dk-EH-aTy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

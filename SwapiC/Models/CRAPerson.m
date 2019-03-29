@@ -10,4 +10,15 @@
 
 @implementation CRAPerson
 
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary
+{
+    self = [super init];
+    if (self){
+        _name = dictionary[@"name"];
+        _height = dictionary[@"height"];
+        _mass = dictionary[@"mass"];
+    }
+    return self;
+}
+
 @end
